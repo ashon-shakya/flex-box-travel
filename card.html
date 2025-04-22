@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Flex blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        /* <!-- global message  --> */
+        .global-message {
+            background: skyblue;
+            height: 2.5rem;
+        }
+
+        .global-message>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* <!-- navbar  --> */
+        header {
+            height: 100px;
+            background-color: blue;
+        }
+
+        header>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            color: white;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        header ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        header ul>li {
+            list-style-type: none;
+            font-size: 1rem;
+        }
+
+        /* <!-- hero  --> */
+        .hero {
+            height: 500px;
+            color: white;
+            background-image: url('./assets/hero.jpg');
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        .hero>div {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero .hero-item {
+            height: 200px;
+            background-color: rgba(124, 102, 102, 0.535);
+            /* background-color: #0000ff; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            border-radius: 20px;
+            gap: 20px;
+
+            backdrop-filter: blur(10px);
+            border: 1px rgb(145, 145, 145) solid
+        }
+
+        .hero .hero-item>hr {
+            width: 100%;
+        }
+
+        .hero .hero-item .hero-title {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .hero .hero-item .hero-description {
+            font-size: 15px;
+        }
+
+
+        /* <!-- Latest Posts --> */
+        .latest {
+            background-color: grey;
+        }
+
+        .latest>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .latest main {
+            display: flex;
+        }
+
+        .latest .articles {
+            width: 66%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .latest .side-links {
+            width: 33%;
+            background-color: rgb(207, 246, 33);
+        }
+
+        .articles article {
+            background-color: #f0f0f0bd;
+            display: flex;
+            gap: 10px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .articles article>img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .articles article .summary {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            /* background-color: beige; */
+        }
+
+        .articles article .summary .article-btn {
+            float: right;
+        }
+
+
+        /* <!-- Recommendation Destination --> */
+
+        /* <!-- Subscribe --> */
+
+        /* <!-- footer  --> */
+    </style>
+</head>
+
+<body>
+    <!-- global message  -->
+    <section class="global-message">
+        <div class="container">
+            <div>Welcome</div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-youtube"></i>
+            </div>
+        </div>
+    </section>
+    <!-- navbar  -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" />
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- hero  -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-item">
+                <div class="hero-title">
+                    Welcome CARD
+                </div>
+                <hr />
+                <div class="hero-description">
+                    your one stop getway information
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="latest">
+        <div class="container">
+            <div class="title">
+                Latest Post
+            </div>
+            <hr>
+            <main>
+                <div class="articles">
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="side-links">
+                    side links
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Recommendation Destination -->
+
+    <!-- Subscribe -->
+
+    <!-- footer  -->
+</body>
+
+</html>
