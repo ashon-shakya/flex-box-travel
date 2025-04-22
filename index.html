@@ -112,6 +112,58 @@
 
 
         /* <!-- Latest Posts --> */
+        .latest {
+            background-color: grey;
+        }
+
+        .latest>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .latest main {
+            display: flex;
+        }
+
+        .latest .articles {
+            width: 66%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .latest .side-links {
+            width: 33%;
+            background-color: rgb(207, 246, 33);
+        }
+
+        .articles article {
+            background-color: #f0f0f0bd;
+            display: flex;
+            gap: 10px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .articles article>img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .articles article .summary {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            /* background-color: beige; */
+        }
+
+        .articles article .summary .article-btn {
+            float: right;
+        }
+
 
         /* <!-- Recommendation Destination --> */
 
@@ -164,6 +216,63 @@
     </section>
 
     <!-- Latest Posts -->
+    <section class="latest">
+        <div class="container">
+            <div class="title">
+                Latest Post
+            </div>
+            <hr>
+            <main>
+                <div class="articles">
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+
+                    <article>
+                        <img src="https://images.pexels.com/photos/36487/above-adventure-aerial-air.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                        <div class="summary">
+                            <div class="article-title">
+                                TITLE
+                            </div>
+                            <div class="article-summary">
+                                SUMMARY OF THE ARTICLE
+                            </div>
+                            <button class="article-btn"> Read More</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="side-links">
+                    side links
+                </div>
+            </main>
+        </div>
+    </section>
 
     <!-- Recommendation Destination -->
 
